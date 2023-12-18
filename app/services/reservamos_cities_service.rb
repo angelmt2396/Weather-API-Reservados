@@ -25,10 +25,7 @@ class ReservamosCitiesService
       return cities
     else
       puts "Error: #{response.code} - #{response.message}"
-      return {
-        message: response.message,
-        code: response.code
-      }
+      raise "Error: #{response.code} - #{response.message}"
     end
   end
 end
