@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "e1ba9b8b-b600-48e3-aa1b-d5a2d3c7016a",
+		"name": "weatherApiReservamos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16875404"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/weather_api//api/v1?city=mon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"weather_api",
+						"",
+						"api",
+						"v1"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "mon",
+							"description": "Nombre parcial o total de una ciudad"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
