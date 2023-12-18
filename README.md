@@ -14,6 +14,8 @@
 * Configuration
 ```
 * run the command: bundle install
+* emviroment
+  API_KEY
 ```
 * Endpoint: GET /api/weather?city=mon
   - params: 
