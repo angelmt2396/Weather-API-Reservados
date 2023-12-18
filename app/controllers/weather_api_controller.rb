@@ -23,6 +23,7 @@ class WeatherApiController < ApplicationController
     threads.each(&:join)
     render json: cityWeather
     rescue StandardError => e
+      puts "Error: #{e.message}"
       render json: { error: "An error occurred: #{e.message}" }, status: :internal_server_error
     end
   end

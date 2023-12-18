@@ -7,7 +7,6 @@ class OpenWeatherApiService
     lon = Float(lon)
     uri_open_weather_map = 'https://api.openweathermap.org/data/2.5/onecall'
     api_key = ENV['API_KEY']
-    puts api_key
     uri = URI.parse("#{uri_open_weather_map}?lat=#{lat}&lon=#{lon}&appid=#{api_key}")
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
@@ -27,7 +26,6 @@ class OpenWeatherApiService
       end
       return data
     else
-      puts "Error: #{response.code} - #{response.message}"
       raise "Error: #{response.code} - #{response.message}"
     end
   end
