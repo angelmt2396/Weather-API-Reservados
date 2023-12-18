@@ -244,6 +244,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
+  concurrent-ruby
   debug
   importmap-rails
   jbuilder
