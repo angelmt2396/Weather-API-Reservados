@@ -1,11 +1,13 @@
 class OpenWeatherApiService
+  require 'dotenv/load'
   require 'net/http'
   require 'uri'
   def self.get(lat, lon)
     lat = Float(lat)
     lon = Float(lon)
     uri_open_weather_map = 'https://api.openweathermap.org/data/2.5/onecall'
-    api_key = 'a5a47c18197737e8eeca634cd6acb581'
+    api_key = ENV['API_KEY']
+    puts api_key
     uri = URI.parse("#{uri_open_weather_map}?lat=#{lat}&lon=#{lon}&appid=#{api_key}")
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
